@@ -1,0 +1,37 @@
+body {
+    background-color: black;
+    margin: 0;
+    align-items: center;
+}
+
+
+.nav-item:hover .nav-link {
+    background-color: rgba(255, 192, 203, 0.059);
+    border-bottom: 1px solid #FFF;
+    color: aqua;
+    transition: all 1s;
+}
+
+img {
+    margin: auto;
+    text-align: center;
+}
+
+#carousel-example {  /* The carousel dots. */
+    padding-bottom: 8rem;
+}
+
+.carousel-caption {     /* The h1 */
+    margin-bottom: 450px;
+}
+
+.item {  /* The whole carousel section */
+    margin-top: 6em;
+}
+
+@media screen and (max-width: 600px) {
+    .carousel-caption {     /* The h1 */
+        margin-bottom: 250px;
+        font-size: medium;
+    }
+  }

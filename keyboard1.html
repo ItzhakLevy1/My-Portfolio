@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="keyboard1.css">
+    <script defer src="https://kit.fontawesome.com/252af1c3af.js" crossorigin="anonymous"></script>
+    <!-- <script defer src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script> -->
+    <script defer src="keyboard1.js"></script>
+    <!-- <script src="keyboardTestttt.js"></script> -->
+    <!-- <script defer src="jquerymin.js"></script> -->
+    <!-- <script defer type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script> -->
+    <title>Document</title>
+</head>
+<body>
+  
+  <div class="navDiv">  
+    <ul>
+        <li><a href="index.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </div>
+  
+  <!-- <input type="checkbox" class="radioCheck" name="creditCheck" id="sound1" value="sound1" onclick="check(this), updateSource();" " />Sound 1     
+  <input type="checkbox" class="radioCheck" name="creditCheck" id="c02" value="sound2"  onclick= "check(this);" />sound 2 -->
+ 
+ <!------------------------------------- The nav bar area ---------------------------------->
+ <!-- <div class="navDiv">  
+    <ul>
+        <li><a href="index.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </div> -->
+
+  <!-- <form>
+    <p class="soundLabel"><input class="soundInput" type="radio" name="band" value="am" checked>Sound on</p>
+    <p class="soundLabel"><input class="soundInput" type="radio" name="band" value="fm">Sound off</p>
+     -->
+
+      
+     <button class="readOutLoudBtn" id="readAudio" onclick="readOutLoud()" type="button" data-tool-tip="Read text"><i class="fa fa-volume-up" style="font-size:33px"></i></button>
+     <button class="readOutLoudBtn" id="readAudioStop" onclick="readOutLoudStop()" type="button" data-tool-tip="Stop reading text"><i class='fas fa-volume-mute' style='font-size:33px'></i></i></button> 
+     
+
+    <audio id="audioCoin" autoplay="autoplay" >
+      <!-- <source src="./audio/audioCoin.wav" type="audio/wav" id="audioCoin"> -->
+    </audio>
+    
+    <!-- <a href="#noscroll" id="toggleSoundBtn">toggle sound</a> -->
+<!-- <div class="audioControlDiv"> -->
+<audio id="sound1" src="./audio/typeSoundSPEED.wav" volume="1" ></audio>
+<audio id="sound2" src="./audio/TRIMMED_typewriter.wav" volume="1" ></audio>
+<!-- </div> -->
+<!--    
+        <div class="audioInfoDiv">
+        <h1>Finding KeyCode In JavaScript</h1>
+        <table border="1">
+            <tr>
+                <td>The key your pressed</td>
+                <td id="key-pressed"></td>
+            </tr>
+            <tr>
+                <td>The keycode of the pressed key</td>
+                <td id="key-code"></td>
+            </tr>
+        </table>
+      </div>
+
+      <form id="drum-machine">
+        <h1>Drum Machine</h1>
+          <div class="display1" id="display"></div><br><br> -->
+
+
+
+<!-- /* < ---------------Sound on key press , At least ond of the divs below has to exists for the sound to work----------->
+       
+            <div class="drum-pad" id="Q1" onclick="playSound('Q')" >
+                <!-- Q --><audio class="cwlip" id="Q" autostart = "false" 
+                 src="./audio/TRIMMED1 (1).wav" aria-valuemax="1" volume="1"></audio></div>
+                 <!-- src="./audio/TRIMMED1 (1).wav" aria-valuemax="1" volume="1"></audio></div> -->
+            <!-- <div class="drum-pad" id="W1" onclick="playSound('W')">
+                W<audio class="clip" id="W" autostart = "false"  
+                 src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"></audio> </div>
+            <div class="drum-pad" id="E1" onclick="playSound('E')">
+                E<audio class="clip" id="E" autostart = "false"  
+                 src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"></audio> </div><br><br>
+       
+            <div class="drum-pad" id="A1" onclick="playSound('A')">
+                A<audio class="clip" id="A" autostart = "false"  
+                 src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"></audio></div>
+            <div class="drum-pad" id="S1" onclick="playSound('S')">
+                S<audio class="clip" id="S" autostart = "false"  
+                 src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"></audio></div>
+            <div class="drum-pad" id="D1" onclick="playSound('D')">
+                D<audio class="clip" id="D" autostart = "false"  
+                 src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"></audio></div><br><br>
+       
+            <div class="drum-pad" id="Z1" onclick="playSound('Z')">
+                Z<audio class="clip" id="Z" autostart = "false"  
+                 src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"></audio></div>
+            <div class="drum-pad" id="X1" onclick="playSound('X')">
+                X<audio class="clip" id="X" autostart = "false"  
+                 src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"></audio></div>
+            <div class="drum-pad" id="C1" onclick="playSound('C')">
+                C<audio class="clip" id="C" autostart = "false"  
+                 src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio></div><br><br> -->
+
+       </div>
+       
+   </form>
+   
+  
+     <div class="mainDiv">
+ </div>
+ ​<div class="container">
+  <div class="textbox__container">
+    <textarea id="textarea1" autofocus name="textbox" cols="128" rows="10" class="textbox" placeholder="Start typing on your keyboard..."></textarea>
+  </div>
+</div>
+<!-- <div class="divH1">
+ ​<h1>Type (or copy/paste) your text into the textarea, <br> Than press the Play button on the right to read the text out loud. <br> You can also switch themes/Keyboards  in the option menu on the left.</h1>
+</div> -->
+
+<!-- <svg width="100%" height="100%" viewBox="30 -50 600 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <path id="path"> -->
+     <!-- <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/> -->
+     <!-- <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" />
+   </path>
+   <text font-size="20" font-family="Montserrat" fill='hsla(36, 95%, 85%, 1)'>
+     <textPath xlink:href="#path">Type (or copy/paste) your text into the textarea, <br> Than press the Play button on the right to read the text out loud. <br> You can also switch themes/Keyboards  in the option menu on the left.
+     </textPath>
+   </text>
+ </svg> -->
+ <div class="divTypingH">
+
+ <span id="type-text"></span>
+<!-- <span class="blinking-cursor">_</span> -->
+</div>
+
+<!--------------------------- The speach settings mune -------------->
+<!-- <div id="page-wrapper">
+  <h1>Web Speech Synthesis Demo</h1>
+  
+  <p id="msg"></p>
+
+  <input type="text" name="speech-msg" id="speech-msg" x-webkit-speech>
+
+	<div class="option">
+		<label for="voice">Voice</label>
+		<select name="voice" id="voice"></select>
+	</div>
+	<div class="option">
+		<label for="volume">Volume</label>
+		<input type="range" min="0" max="1" step="0.1" name="volume" id="volume" value="1">
+	</div>
+	<div class="option">
+		<label for="rate">Rate</label>
+		<input type="range" min="0.1" max="10" step="0.1" name="rate" id="rate" value="1">
+	</div>
+	<div class="option">
+		<label for="pitch">Pitch</label>
+		<input type="range" min="0" max="2" step="0.1" name="pitch" id="pitch" value="1">
+	</div>
+
+	<button id="speak">Speak</button>
+
+</div>
+
+</div> -->
+
+
+<h1></h1>
+<div class="keyboard">
+  <div class="keyboard__row keyboard__row--h1">
+    <div data-key="27" class="key--word">
+      <span>esc</span>
+    </div>
+    <div data-key="112" class="key--fn">
+      <span>F1</span>
+    </div>
+    <div data-key="113" class="key--fn">
+      <span>F2</span>
+    </div>
+    <div data-key="114" class="key--fn">
+      <span>F3</span>
+    </div>
+    <div data-key="115" class="key--fn">
+      <span>F4</span>
+    </div>
+    <div data-key="116" class="key--fn">
+      <span>F5</span>
+    </div>
+    <div data-key="117" class="key--fn">
+      <span>F6</span>
+    </div>
+    <div data-key="118" class="key--fn">
+      <span>F7</span>
+    </div>
+    <div data-key="119" class="key--fn">
+      <span>F8</span>
+    </div>
+    <div data-key="120" class="key--fn">
+      <span>F9</span>
+    </div>
+    <div data-key="121" class="key--fn">
+      <span>F10</span>
+    </div>
+    <div data-key="122" class="key--fn">
+      <span>F11</span>
+    </div>
+    <div data-key="123" class="key--fn">
+      <span>F12</span>
+    </div>
+    <div data-key="n/a" class="key--word">
+      <span>pwr</span>
+    </div>
+  </div>
+  <div class="keyboard__row">
+    <div class="key--double" data-key="192">
+      <div>~</div>
+      <div>`</div>
+    </div>
+    <div class="key--double" data-key="49">
+      <div>!</div>
+      <div>1</div>
+    </div>
+    <div class="key--double" data-key="50">
+      <div>@</div>
+      <div>2</div>
+    </div>
+    <div class="key--double" data-key="51">
+      <div>#</div>
+      <div>3</div>
+    </div>
+    <div class="key--double" data-key="52">
+      <div>$</div>
+      <div>4</div>
+    </div>
+    <div class="key--double" data-key="53">
+      <div>%</div>
+      <div>5</div>
+    </div>
+    <div class="key--double" data-key="54">
+      <div>^</div>
+      <div>6</div>
+    </div>
+    <div class="key--double" data-key="55">
+      <div>&</div>
+      <div>7</div>
+    </div>
+    <div class="key--double" data-key="56">
+      <div>*</div>
+      <div>8</div>
+    </div>
+    <div class="key--double" data-key="57">
+      <div>(</div>
+      <div>9</div>
+    </div>
+    <div class="key--double" data-key="48">
+      <div>)</div>
+      <div>0</div>
+    </div>
+    <div class="key--double" data-key="189">
+      <div>_</div>
+      <div>-</div>
+    </div>
+    <div class="key--double" data-key="187">
+      <div>+</div>
+      <div>=</div>
+    </div>
+    <div class="key--bottom-right key--word key--w4" data-key="8">
+      <span>delete</span>
+    </div>
+  </div>
+  <div class="keyboard__row">
+    <div class="key--bottom-left key--word key--w4" data-key="9">
+      <span>tab</span>
+    </div>
+    <div class="key--letter" data-char="Q">Q</div>
+    <div class="key--letter" data-char="W">W</div>
+    <div class="key--letter" data-char="E">E</div>
+    <div class="key--letter" data-char="R">R</div>
+    <div class="key--letter" data-char="T">T</div>
+    <div class="key--letter" data-char="Y">Y</div>
+    <div class="key--letter" data-char="U">U</div>
+    <div class="key--letter" data-char="I">I</div>
+    <div class="key--letter" data-char="O">O</div>
+    <div class="key--letter" data-char="P">P</div>
+    <div class="key--double" data-key="219" data-char="{[">
+      <div>{</div>
+      <div>[</div>
+    </div>
+    <div class="key--double" data-key="221" data-char="}]">
+      <div>}</div>
+      <div>]</div>
+    </div>
+    <div class="key--double" data-key="220" data-char="|\">
+      <div>|</div>
+      <div>\</div>
+    </div>
+  </div>
+  <div class="keyboard__row">
+    <div class="key--bottom-left key--word key--w5" data-key="20">
+      <span>caps lock</span>
+    </div>
+    <div class="key--letter" data-char="A">A</div>
+    <div class="key--letter" data-char="S">S</div>
+    <div class="key--letter" data-char="D">D</div>
+    <div class="key--letter" data-char="F">F</div>
+    <div class="key--letter" data-char="G">G</div>
+    <div class="key--letter" data-char="H">H</div>
+    <div class="key--letter" data-char="J">J</div>
+    <div class="key--letter" data-char="K">K</div>
+    <div class="key--letter" data-char="L">L</div>
+    <div class="key--double" data-key="186">
+      <div>:</div>
+      <div>;</div>
+    </div>
+    <div class="key--double" data-key="222">
+      <div>"</div>
+      <div>'</div>
+    </div>
+    <div class="key--bottom-right key--word key--w5" data-key="13">
+      <span>return</span>
+    </div>
+  </div>
+  <div class="keyboard__row">
+    <div class="key--bottom-left key--word key--w6" data-key="16">
+      <span>shift</span>
+    </div>
+    <div class="key--letter" data-char="Z">Z</div>
+    <div class="key--letter" data-char="X">X</div>
+    <div class="key--letter" data-char="C">C</div>
+    <div class="key--letter" data-char="V">V</div>
+    <div class="key--letter" data-char="B">B</div>
+    <div class="key--letter" data-char="N">N</div>
+    <div class="key--letter" data-char="M">M</div>
+    <div class="key--double" data-key="188">
+      <div>&lt;</div>
+      <div>,</div>
+    </div>
+    <div class="key--double" data-key="190">
+      <div>&gt;</div>
+      <div>.</div>
+    </div>
+    <div class="key--double" data-key="191">
+      <div>?</div>
+      <div>/</div>
+    </div>
+    <div class="key--bottom-right key--word key--w6" data-key="16-R">
+      <span>shift</span>
+    </div>
+  </div>
+  <div class="keyboard__row keyboard__row--h3">
+    <div class="key--bottom-left key--word">
+      <span>fn</span>
+    </div>
+    <div class="key--bottom-left key--word key--w1" data-key="17">
+      <span>control</span>
+    </div>
+    <div class="key--bottom-left key--word key--w1" data-key="18">
+      <span>option</span>
+    </div>
+    <div class="key--bottom-right key--word key--w3" data-key="91">
+      <span>command</span>
+    </div>
+    <div class="key--double key--right key--space" data-key="32" data-char=" ">
+      &nbsp;
+    </div>
+    <div class="key--bottom-left key--word key--w3" data-key="93-R">
+      <span>command</span>
+    </div>
+    <div class="key--bottom-left key--word key--w1" data-key="18-R">
+      <span>option</span>
+    </div>
+    <div data-key="37" class="key--arrow">
+      <span>&#9664;</span>
+    </div>
+    <div class="key--double key--arrow--tall" data-key="38">
+      <div>&#9650;</div>
+      <div>&#9660;</div>
+    </div>
+    <div data-key="39" class="key--arrow">
+      <span>&#9654;</span>
+    </div>
+  </div>
+</div>
+
+  <!-------------- Buttons options menu  ------------>
+  
+  <div class="selectonnButtonsMenu">
+ 
+    <div class="radiogroup" id="OptionMenuTitle">
+     <div class="wrapper">
+       <input class="state" type="radio" name="app" id="a" value="a" >
+       <label class="label" for="a">
+         <!-- <div class="indicator"></div> -->
+         <span class="text" id="optionsTitle"> Type options </span>
+       </label>
+     </div>
+     <br>
+     <div class="wrapper">
+       <input class="state" type="radio" name="app" id="b" value="b"  onclick="goToType1()">
+       <label class="label" for="b">
+         <div class="indicator"></div>
+         <span class="text" onclick="goToType1()">Type 1</span>
+       </label>
+     </div>
+     <div class="wrapper">
+       <input class="state" type="radio" name="app" id="c" value="c" onclick="goToType2()">
+       <label class="label" for="c">
+         <div class="indicator"></div>
+         <span class="text" onclick="goToType2()">Type 2</span>
+       </label>
+     </div>
+     <div class="wrapper">
+      <input class="state" type="radio" name="app" id="d" value="d" onclick="goToType3()">
+      <label class="label" for="d">
+        <div class="indicator"></div>
+        <span class="text" onclick="goToType3()">Type 3 <br>(+settings)</span>
+      </label>
+    </div>
+   </div>
+   </div>
+
+<script>
+  function getKey (e) {
+  var location = e.location;
+  var selector;
+  if (location === KeyboardEvent.DOM_KEY_LOCATION_RIGHT) {
+      selector = ['[data-key="' + e.keyCode + '-R"]']
+  } else {
+      var code = e.keyCode || e.which;
+      selector = [
+          '[data-key="' + code + '"]',
+          '[data-char*="' + encodeURIComponent(String.fromCharCode(code)) + '"]'
+      ].join(',');
+  }
+  return document.querySelector(selector);
+}
+
+function pressKey (char) {
+  var key = document.querySelector('[data-char*="' + char.toUpperCase() + '"]');
+  if (!key) {
+      return console.warn('No key for', char);
+  }
+  key.setAttribute('data-pressed', 'on');
+  setTimeout(function () {
+      key.removeAttribute('data-pressed');
+  }, 200);
+}
+
+var h1 = document.querySelector('h1');
+var originalQueue = h1.innerHTML;
+var queue = h1.innerHTML;
+
+function next () {
+  var c = queue[0];
+  queue = queue.slice(1);
+  h1.innerHTML = originalQueue.slice(0, originalQueue.length - queue.length);
+  pressKey(c);
+  if (queue.length) {
+      setTimeout(next, Math.random() * 200 + 50);
+  }
+}
+
+h1.innerHTML = "&nbsp;";
+setTimeout(next, 500);
+
+document.body.addEventListener('keydown', function (e) {
+  var key = getKey(e);
+  if (!key) {
+      return console.warn('No key for', e.keyCode);
+  }
+
+  key.setAttribute('data-pressed', 'on');
+});
+
+document.body.addEventListener('keyup', function (e) {
+  var key = getKey(e);
+  key && key.removeAttribute('data-pressed');
+});
+
+function size () {
+  var size = keyboard.parentNode.clientWidth / 90;
+  keyboard.style.fontSize = size + 'px';
+  console.log(size);
+}
+
+var keyboard = document.querySelector('.keyboard');
+window.addEventListener('resize', function (e) {
+  size();
+});
+size();
+</script>
+</body>
+</html> 
+ 

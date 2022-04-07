@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script defer src="https://smtpjs.com/v3/smtp.js"></script>
+    <script defer type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script defer src="contact.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <!-- <script defer src="jquerymin.js"></script> -->   <!-- Not working -->
+    <!-- <script defer src="project1.js"></script> -->
+    <!-- <script defer src="Projects.js"></script> -->
+    <!-- <script defer src="sweetalert2min.js"></script> -->  <!-- Not working -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <title>Document</title>
+</head>
+<body>
+  <!---------------------- Disable/Hide the scrolling bar ------------------>
+  <style>
+    body {
+      overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+    }
+    
+  </style>
+
+    <!-------------- The animated opennng frame ------------>
+    <header>
+        <div class="box"></div>
+        <div class="curve">
+          <div class="left"><div></div></div>
+          <div class="center"></div>
+          <div class="right"><div></div></div>
+        </div>
+      </header>
+      <footer>
+        <div class="curve">
+          <div class="left"><div></div></div>
+          <div class="center"></div>
+          <div class="right"><div></a></div></div>
+        </div>
+        <div class="box"></div>
+      </footer>
+
+    <div class="navDiv">  
+        <ul>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+
+      <div class="videoDiv">
+        <video autoplay muted  id="myVideo">
+         <source src="./videos/Space - 24211.mp4" type="video/mp4">
+       </video>
+      </div>
+
+     
+<!------------------------- The contact form ------------------------>
+<form action="" method="POST">
+<div class="container" id="container">
+  <input type="checkbox" class="toggle" id="toggle" checked="checked" /><label class="toggle" for="toggle"> <!-- Toggle tilt --></label>
+  <div class="menu">
+    <!-- <div class="top">
+      <span class="search">
+        <input type="text">
+      </span>
+      <a class="exit" href="#" tabindex="0"></a>
+    </div> -->
+    <ul class="middle">
+      <li tabindex="0"><i class="fa fa-calendar"></i>Name</li>
+      <div class="top">
+        <span class="search">
+          <input id="nameInput" placeholder="Your Name" type="text" autofocus>
+        </span>
+        <br>
+        <br>
+        <!-- <a class="exit" href="#" tabindex="0"></a> -->
+      </div>
+      <li tabindex="0"><i class="fa fa-camera"></i>Email</li>
+      <div class="top">
+        <span class="search">
+          <input id="emailInput" type="email" placeholder="Your Email Address" multiple>
+        </span>
+        <br>
+        <br>
+        <!-- <a class="exit" href="#" tabindex="0"></a> -->
+      </div>
+      <li tabindex="0"><i class="fa fa-check-square-o"></i>Message</li>
+      <div class="top">
+        <span class="search">
+          <div id="inputMessage" ><textarea  placeholder="Type your Message Here...." name="" id="" cols="30" rows="50"></textarea></div>
+          <!-- <input rows="20" cols="20" id="inputMessage" type="text">  -->
+        </span>
+        <!-- <a class="exit" href="#" tabindex="0"></a> -->
+      </div>
+      <!-- <li tabindex="0"><i class="fa fa-map-marker"></i>Places</li>
+      <li tabindex="0"><i class="fa fa-codepen"></i>Codepen</li>
+      <li tabindex="0"><i class="fa fa-dribbble"></i>Dribbble</li>
+      <li tabindex="0"><i class="fa fa-user"></i>User account</li>
+      <li tabindex="0"><i class="fa fa-cogs"></i>Settings</li> -->
+    </ul>
+    <button id="submitBtn">Submit</button>
+    <div class="bottom"></div>
+    <div class="menu-back"></div>
+    <div class="glass-reflection"></div>
+  </div>
+</div>
+</form>
+<!-- <div class="divA">
+    animation
+</div> -->
+</body>
+</html>

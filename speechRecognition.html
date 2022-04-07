@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+        <script defer type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script defer src="speechRecognition.js"></script>
+        <link rel="stylesheet" href="speechRecognition.css">
+    <script defer src="https://pro.fontawesome.com/releases/v5.10.0/js/all.js" integrity="sha384-G/ZR3ntz68JZrH4pfPJyRbjW+c0+ojii5f+GYiYwldYU69A+Ejat6yIfLSxljXxD" crossorigin="anonymous"></script>
+  <!--   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>  --><!-- To style font awesome icons -->
+    <title>Speech Recognition</title>
+</head>
+<body>
+   
+    <!----------- The animated menu --------->
+ <header1 id="header1">
+    <div class="menu-button">
+      <div class="menu-button-line"></div>
+      <div class="menu-button-line"></div>
+      <div class="menu-button-line"></div>
+    </div>
+    <nav class="menu">
+      <div class="menu-branding"></div>
+      <ul class="menu-nav">
+        <!------------------------------------- The nav bar area ---------------------------------->
+  <div class="navDiv">  
+    <ul>
+        <li><a href="index.html">Projects</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </div>
+      </ul>
+    </nav>
+  </header1>
+
+ <div class="videoDiv" id="videoDiv">
+    <video autoplay muted loop id="videoAvatar">
+     <!-- <source src="./videos/videoAvatar.mp4" type="video/mp4"> -->
+      <source src="./videos/Global - 48091.mp4" type="video/mp4">
+        <!-- <source id="bgVideo" src="./videos/video.mp4 - 48091.mp4" type="video/mp4"> -->
+   </video>
+  </div>
+
+  <div class="divGrid">
+    
+    
+ <h3 class="content"></h3>
+ <a href="#">
+  <button class="talk"><!-- Talk --> <i class="fas fa-microphone fa-4x"></i></button>
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</a>
+<h1 class="h1trySaying">Click the button and try saying :</h1>
+<h3 class="h3-1">How are you.</h3>
+<h3 class="h3-2">Tell me about the future.</h3>
+<h3 class="h3-3">How is the weather.</h3>
+<h3 class="h3-4">Open the browser.</h3>
+<h3 class="h3-5">Google.</h3>
+<h3 class="h3-6">Youtube.</h3>
+<h3 class="h3-7">Aliexpress.</h3>
+<h3 class="h3-8">Amazon</h3>
+
+<div class="loader">
+  <div class="inner one"></div>
+  <div class="inner two"></div>
+  <div class="inner three"></div>
+  <!-- <h1>Listenning< /h1> -->
+</div>
+</div>
+<!---------------------------------- New -------------------------->
+
+<!-- <div class="container">
+  <form action="https://www.google.com/search" method="get" target="_blank" id="search-form">
+    <input name="q" type="text" placeholder="Search Google..." autocomplete="off" autofocus>
+    <button type="button"><i class="fas fa-microphone"></i></button>
+  </form>
+  <p class="info"></p>
+</div> -->
+
+</body>
+</html>

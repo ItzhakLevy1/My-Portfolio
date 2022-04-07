@@ -1,0 +1,679 @@
+body {
+    /* background-color:#eee */
+    background-color: rgb(255, 255, 255);
+      overflow: hidden;
+  }
+  
+  /* -----------------------------------------The nav bar section ------------------------------------*/
+  
+ .navDiv {
+  position: absolute;
+  top: 3rem;
+  /* z-index: 99; */
+  /* margin-left: 402px; */
+  align-items: center;
+  align-content: center;
+  /* height: 5px; */
+  /* color: white; */
+  /* display:flex; */
+  justify-content:center;
+  align-items:center; 
+  height: 1%;
+  margin-top: 3rem;
+  margin-left:-10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.navDiv::after {
+  position: sticky;
+  top: 3rem;
+  z-index: 99;
+  height: 5px;
+
+}
+
+.navDiv ul li {
+  list-style: none;
+  font-size: 1.6em;
+  height: 50px;
+  font-family: "oswald", sans-serif;
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+  line-height: 50px;
+  transition-duration: 0.5s;
+  display: inline;
+  border-bottom: 0px solid  rgb(255, 0, 200);
+
+}
+
+.navDiv ul {
+  background-color: rgba(68, 68, 68, 0);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  margin-left: 38.5%;
+}
+
+.navDiv ul a {
+  display: block;
+   text-decoration: none;
+  /* color: white;  */
+  -webkit-text-stroke: 1px white; /* width and color */
+  color: black;
+  display: inline;
+}
+
+.navDiv ul li a {
+  /* border-bottom: 1.5px solid transparent; */
+  transition: 1s;
+  width: 500px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.navDiv ul li a:hover {
+  border-bottom: 1.5px solid  rgb(255, 0, 200);
+  -webkit-text-stroke: 1.5px rgb(255, 0, 200); /* width and color */
+  color: black;
+  /* font-size: 1.6rem; */
+  /* text-shadow: 1px 1px 1px white; */
+}
+
+
+
+/* -------------------------------The sound panel --------------------------*/
+/* 
+  * {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+  :root {
+    --bg: #000;
+    --fg: #17181c;
+    --bs1: #ffffff;
+    --bs2: #f3f4f8;
+    --bs3: #cccdd1;
+    --bs4: #c1c2c5;
+    --transDur: 0.1s;
+    /* font-size: calc(20px + (40 - 20)*(100vw - 320px)/(2560 - 320)); */
+  }
+  body, form {
+    display: flex;
+  }
+  body, .soundInput {
+    color: var(--fg);
+    font: 1em/1.5 Muli, sans-serif;
+  }
+  /* body {
+    background-color: var(--bg);
+    height: 100vh;
+  } */
+  form, .soundLabel {
+    width: 100%;
+  }
+  form {
+    margin: auto;
+    max-width: 24em;
+    padding: 0 1.5em;
+  }
+  .soundLabel {
+    display: block;
+    margin: 0 0.2em;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .soundLabel:first-child .soundInput {
+    border-radius: 0.5rem 0.5em 0.5em 0.5rem;
+  }
+  .soundLabel:last-child .soundInput {
+    border-radius: 0.5rem 0.5em 0.5em 0.5rem;
+  }
+  .soundInput {
+    border-radius: 0;
+    box-shadow:
+  /* 		0.15em 0.15em 1em var(--bs2) inset, */
+  /* 		0.15em 0.15em 1em var(--bs3) inset, */
+  /* 		0.15em 0.15em 0.45em var(--bs4),  */
+      -0.15em -0.15em 0.95em ;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 0.5em;
+    width: 100%;
+    height: 1em;
+    transition: all var(--transDur) ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .soundInput:checked {
+    box-shadow:
+      -0.15em -0.15em 0.45em var(--bs2) inset,
+      0.15em 0.15em 0.45em var(--bs4) inset,
+      0 0 0 var(--bs4), 
+      0 0 0 var(--bs1);
+  }
+  .soundInput:checked + span {
+    opacity: 1;
+  }
+  .soundInput:focus {
+    outline: transparent;
+  }
+  .soundInput + span {
+    opacity: 0.1;
+    transition: opacity ease-in-out;
+  }
+  
+  
+  .audioInfoDiv{
+    color: white;
+    
+  }
+
+/* < ---------------Sound on key press visualisation ,Actual movement of the keys -----------> */
+.mainDiv{
+  position: relative;
+  display: flex;
+  /* grid-template-columns: 4fr; */
+  /* flex-direction: column;*/
+  justify-content: center;
+
+  align-items: center;
+  /* min-height:100vh;  */
+}
+
+h1 {  /* The H1 */
+  text-align: center;
+  font-size: 1.8em;
+  font-family: monospace;
+  padding: 0.7em;
+  /* display: inline-flex; */
+  position: absolute;
+  margin-left: 28rem;
+}
+
+.keyboard {
+  position: absolute;
+    text-align: center;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-top: 22rem;
+}
+
+.keyboard__row { /* Rows 2-5 height */
+    display: inline-block;
+    height: 3em;
+    margin: 0.2em;
+}
+
+.keyboard__row--h1 {  /* The first row "F" buttons */
+    height: 1.7em;
+    line-height: 1.4em;
+}
+
+.keyboard__row--h3 {
+    height: 3.3em; /* Bottom row height  */
+}
+
+.keyboard__row > * { /* Overall parameters */
+    position: relative;
+    /* background: #333; */
+    background: rgb(0, 0, 0);
+    text-align: center;
+    color: #eee;
+    float: left;
+    border-radius: 0.3em;
+    margin: 0.2em;
+    padding: 0.2em;
+    width: 3.3em;
+    height: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    -webkit-user-select: none;
+    border: 1px solid #444;
+    box-shadow: 0 0.2em 0 0.05em #222;
+    border-bottom-color: #555;
+}
+
+.keyboard__row--h1 > div {
+    width: 3.5em; /* First row width */
+}
+
+.keyboard__row > div[data-pressed],
+.keyboard__row > div:active {
+    background: #2a2a2a;
+    color: #aaa;
+    position: relative;
+    top: 0.2em;
+    box-shadow: 0 0 0 0.05em black;
+}
+
+.key--w3 {
+    width: 4.6em; /* Bottom row "command" buttons width */
+}
+
+.key--w4 {
+    width: 6em; /* Rows 2+3, "delet" + "tab" */
+}
+
+.key--w5 {
+    width: 6.5em; /* Row 4 "caps lock" + "return" */
+}
+
+.key--w6 {
+    width: 8.3em; /* Row  "shift" */
+}
+
+.key--space {
+    width: 18em; /* Bottom row "space" */
+}
+
+.key--double > * {
+    padding-top: 0em;  /* Effects any button that has 2 symbels */
+    margin-bottom: -0.3em; /* Brings the 2 symbles closer together */
+}
+
+.key--letter {
+    line-height: 2.8em; /* A-Z height of the letter on the button */
+}
+
+.key--bottom-left > * {
+    position: absolute;
+    text-align: left;
+    bottom: 0.4em; /*  Buttom row "option"+"command"+"control" */
+    left: 0.4em;
+}
+
+.key--bottom-right > * {
+    position: absolute;
+    text-align: right;
+    bottom: 0.4em;  /* Buttom row left "command" */
+    right: 0.4em;
+}
+
+.key--fn > * { /* First row all the "F" */
+    font-size: 0.6em;
+    line-height: 1em;
+    padding-top: 1.2em;
+    padding-right: 0.2em;
+    text-align: right;
+    float: right;
+}
+
+.key--word > * {
+    font-size: 0.8em; /* All of the word buttons at the outside: left + right + and bottom */
+}
+
+.key--arrow--tall > *,
+.key--arrow > * {
+    font-size: 0.5em; /* Middle Arrow button */
+    line-height: 3em;
+}
+
+.key--arrow { /* Sides Arrow buttons */
+    height: 1.8em;
+    margin-top: 1.7em;
+    line-height: 0.5em;
+}
+
+.key--arrow--tall > * {
+    padding-top: 0.2em;
+}
+
+.keyboard > .keyboard__row {
+    text-align: center;
+}
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.container__content {
+  width: 60%;
+}
+
+.textbox {
+  /* width: 100%; */
+  resize: none;
+  /* background: linear-gradient(145deg, #F2F7FB, #E9F2FB);
+  box-shadow: inset 8px 8px 15px #D9E3EC; */
+  background: linear-gradient(145deg, #000000, #000000);
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+-moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.75); 
+  border-radius: 12px;
+  border: none;
+  /* overflow: auto; */
+  padding: 20px;
+  outline: none;
+  /* margin: 50px 0; */
+  
+  margin-top: -15rem;
+  margin-left: 16.5rem;
+  color: white;
+  position: absolute;
+}
+
+/*------------ Buttons options menu---------- */
+
+
+/* body {
+  height: 100vh;
+  width: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ecf0f3;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+} */
+
+/* .selectonnButtonsMenu{
+  height: 100vh;
+  width: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ecf0f3;
+  font-family: 'IBM Plex Sans Condensed', sans-serif;
+  padding-left: 0%;
+
+} */
+
+.radiogroup {
+  padding: 48px 64px;
+  border-radius: 16px;
+  background: #ecf0f3;
+  box-shadow:
+    4px 4px 4px 0px #d1d9e6 inset,
+    -4px -4px 4px 0px #ffffff inset;
+  padding-left: 3%;
+  padding-right: 0%;
+  width: 10%;
+  margin-left: 0%;
+  margin-top: 15rem;
+  position:absolute;
+  /* top:50%; */
+  /* left:0%; */
+  /* transform:translate(-50%,-50%); */
+}
+
+
+.wrapper {
+  margin: 8px 0;
+}
+
+.state {
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 1e-5;
+  pointer-events: none;
+}
+
+.label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  color: #394a56;
+}
+
+.text {
+  margin-left: 16px;
+  opacity: .6;
+  transition: opacity .2s linear, transform .2s ease-out;
+}
+
+.indicator {
+  position: relative;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  box-shadow:
+    -8px -4px 8px 0px #ffffff,
+    8px 4px 12px 0px #d1d9e6;
+  overflow: hidden;
+}
+
+.indicator::before,
+.indicator::after {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  border-radius: 50%;
+}
+
+.indicator::before {
+  box-shadow:
+    -4px -2px 4px 0px #d1d9e6,
+    4px 2px 8px 0px #fff;
+}
+
+.indicator::after {
+  background-color: #ecf0f3;
+  box-shadow:
+    -4px -2px 4px 0px #fff,
+    4px 2px 8px 0px #d1d9e6;
+  transform: scale3d(1, 1, 1);
+  transition: opacity .25s ease-in-out, transform .25s ease-in-out;
+}
+
+.state:checked ~ .label .indicator::after {
+  transform: scale3d(.975, .975, 1) translate3d(0, 10%, 0);
+  opacity: 0;
+}
+
+.state:focus ~ .label .text {
+  transform: translate3d(8px, 0, 0);
+  opacity: 1;
+}
+
+.label:hover .text {
+  opacity: 1;
+}
+
+#optionsTitle{
+  margin-left: 0rem;
+  font-weight: 900;
+}
+
+/* ---------The text to speach buttons ----------*/
+.readOutLoudBtn{
+  cursor: pointer;
+  height: 50px;
+  position: absolute;
+  margin-left: 90%;
+  width: 5%;
+  /* display: block; */
+}
+
+#readAudioStop{
+  margin-top: 4%;
+}
+#readAudio{
+  margin-top: 1%;
+}
+
+/* h1{
+    word-wrap: break-word;
+}
+
+.divH1{
+  word-break: break-all;
+  position: absolute;
+  width: 100%;
+  margin-top: -2%;
+  margin-left: -15%;
+  float: right;
+} */
+
+
+
+/* @import url(https://fonts.googleapis.com/css?family=Montserrat:700); */
+/* body{
+  margin:0;
+  width:100%; 
+  height:100vh;
+  overflow:hidden;
+  background:hsla(0, 5%, 5%, 1);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-image: linear-gradient(to right top, hsla(0, 5%,15%, 0.5), hsla(0, 5%, 5%,1));
+} */
+/* svg{
+  width:50%;
+  position: absolute;
+  margin-top: -10%;
+  margin-left: 20%;
+} */
+
+
+
+
+/* body {
+	min-height: 100vh;
+	padding: 0 10%;
+	background-color: #111;
+	color: #FFF;
+	font-size: 2em;
+	display: flex;
+	align-items: center;
+} */
+
+/* ---------------------------The automatic launched text on page reload --------------------*/
+.divTypingH
+{
+  position: absolute;
+  margin-top: 1%;
+  margin-left: 30%;
+  word-wrap: break-word;
+  /* font-weight: bold; */
+  font-size: 20px;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  line-height: 35px;
+  color: rgb(0, 0, 0);
+  animation: color 19s linear forwards;
+  text-shadow: 0 0 0.1rem currentColor;
+  /* background-color: rgb(230, 230, 230); */
+/* text-align: center; */ 
+}
+.blinking-cursor {
+	pointer-events: none;
+	user-select: none;
+  animation: blink 1s steps(2, start) infinite;
+  position: absolute;
+}
+/* 
+@keyframes blink {
+	to {
+		visibility: hidden;
+	}
+} */
+@keyframes color
+{
+  /* from { color: #FF0000; } */
+  /* 64.21% { color: #FF0000; } */
+  85.91% { color: #00FF00; }
+  /* to { color: #00FF00; } */
+}
+
+/* <!--------------------------- The speach settings mune --------------> */
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* html {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  background: #333;
+  position: relative;
+} */
+
+#page-wrapper {
+  width: 640px;
+  background: #FFFFFF;
+  padding: 1em;
+  margin: 1em auto;
+  /* border-top: 5px solid #69c773; */
+  /* border-top: 5px solid #00fc19; */
+  box-shadow: 0 2px 10px rgba(0,0,0,0.8);
+  width: 20%;
+  height: 30%;
+  margin-left: 80%;
+  margin-top: 23%;
+  z-index: 99;
+}
+
+/* h1 {
+  margin-top: 0;
+} */
+
+#msg {
+  font-size: 0.9em;
+  line-height: 1.4em;
+}
+
+#msg.not-supported strong {
+  color: #CC0000;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1.2em;
+  border-radius: 3px;
+  border: 1px solid #D9D9D9;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.1) inset;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+label {
+  display: inline-block;
+  float: left;
+  width: 150px;
+}
+
+.option {
+  margin: 1em 0;
+}
+
+button {
+  display: inline-block;
+  border-radius: 3px;
+  border: none;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8em;
+  background: #00fc19;
+  border-bottom: 1px solid #00fc19;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  margin: 0;
+  width: 100%;
+  text-align: center;
+}
+
+button:hover, button:focus {
+  opacity: 0.75;
+  cursor: pointer;
+}
+
+button:active {
+  opacity: 1;
+  box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.1) inset;
+}

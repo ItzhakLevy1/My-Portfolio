@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charse t="utf-8">
+    <link rel="stylesheet" href="project2.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <!-- <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/252af1c3af.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script defer src="jquerymin.js"></script>
+    <script defer src="project2.js"></script>
+    <script defer src="project.js"></script>
+    <!-- <script defer src="sweetalert2min.js"></script> -->
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/p5@1.1.9/lib/p5.js"></script>
+    <title>project 2</title>
+  </head>
+  <body>
+
+    <header></header>
+
+<div class="topDiv">
+
+
+    <!------------------------------------- The nav bar area ---------------------------------->
+    <div class="navDiv">  
+        <ul>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+
+      <!------------------The sound panel ------------------>
+      <!-- <div class="soundDiv">
+        <form> -->
+          <!-- <a href="#" id="toggleSoundBtn">toggle sound</a> -->
+          <!-- <p class="soundLabel" id="SoundOnBtn" onclick="disableMute()"><input class="soundInput" type="radio" name="seconds" value="SoundOn" checked>Sound on</p> -->
+          <!-- <p class="soundLabel" id="SoundOnBtn" onclick="disableMute()"><input class="soundInput" type="radio" name="seconds" value="SoundOn" checked>Sound on</p>
+          <p class="soundLabel" id="SoundOffBtn" onclick="enableMute()"><input class="soundInput" type="radio" name="seconds" value="SoundOff">Sound off</p> -->
+          
+          <!-- <button class="soundLabel" id="SoundOnBtn" onclick="disableMute()"></button><input class="soundInput" type="radio" name="seconds" value="SoundOn" checked>Sound on</button>
+          <button class="soundLabel" id="SoundOffBtn" onclick="enableMute()"><input class="soundInput" type="radio" name="seconds" value="SoundOff">Sound off</button> -->
+<!-- 
+        </form>
+    </div> -->
+  </div>
+      <!-- <div class="startBtnDiv"> -->
+<!-- <button id="startBtn" onclick="window.location.reload()">Start</button> -->
+<!-- <a id="startBtn" onclick="window.location.reload()">START GAME</a>
+      </div> -->
+
+    <div class="grid">
+    </div>
+
+    
+    <!-- <audio id="audioCoin" autoplay="autoplay"> -->
+      <!-- <source src="audioCoin.wav" type="audio/wav" id="audioCoin"> -->
+    <!-- </audio> -->
+
+
+<!--     
+    <a href="#noscroll" id="toggleSoundBtn">toggle sound</a>
+    
+
+    <audio id="audioBackgroundM" autoplay="autoplay">
+      <source src="audioBackgroundM.wav" type="audio/wav" id="audioBackgroundM">
+    </audio> -->
+
+
+
+
+    <!-- <audio id="audioCoin" autoplay="autoplay"> -->
+      <!-- <source src="audioBackgroundM.wav" /> -->
+    <!-- </audio>  -->
+    
+    <!-- <a href="#noscroll" id="toggleSoundBtn">toggle sound</a> -->
+    
+
+    
+      <!------------------The sound panel ------------------>
+
+    <div class="soundDiv">
+      <!-- <form> -->
+    
+<audio id="audioBackgroundM" loop autoplay="autoplay" >
+    <source src="./audio/audioBackgroundM.wav" />
+</audio>
+
+ <audio id="audioCoin" autoplay="autoplay" >
+      <source src="./audio/audioCoin.wav" type="audio/wav" id="audioCoin">
+    </audio>
+
+<button class="soundBtn" id="playAudio" onclick="playAudio()" type="button"><i class="fa fa-volume-up" style="font-size:36px"></i></button>
+<button class="soundBtn" id="pauseAudio" onclick="pauseAudio()" type="button"><i class='fas fa-volume-mute' style='font-size:36px'></i></i></button> 
+
+ <!-- <form/> -->
+ <div/>
+<div class="moveIconsDiv">
+  <!-- <ion-icon name="arrow-back"></ion-icon>  -->  <!-- ionicons icon -->
+  <span class="arrowIcons" style="font-size: 60px; color: rgb(255, 255, 255); ">  <!--  Fontawesome icon -->
+    <p class="iconP">Use keyboard keys to move</p>
+  <i class="fas fa-long-arrow-alt-left" style="padding-left: 36px;"></i>
+  <i class="fas fa-long-arrow-alt-right"></i>
+</span>
+</div>
+  </body>
+</html>

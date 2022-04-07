@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+    <link rel="stylesheet" href="WhereTheISSApi.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+    crossorigin=""></script>
+    <script defer src="WhereTheISSApi.js"></script>
+    <title>Fetch JSON from api and map lan lon</title>
+</head>
+<body>
+   
+    <div class="navDiv">  
+        <ul>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+      <main>
+        <section>
+         
+      <div id="infoDiv">
+      <h1 id="h1Info">The ISS<br/> current <br/>loction:</h1>
+
+      <h2 id="lanLonP">
+        latitude: <span id="lat"></span>° <!-- &deg; --><br />
+        longitude: <span id="lon"></span>° <br />
+      </h2>
+      <h1>Time</h1>
+<div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+
+    </div>
+
+    <div class="divBtn">
+      <button class="goToBtn" onclick="goToMyCurrentLocationFunc()">Go to My current location</button>
+    </div>
+      <div id="issMap"></div>
+   
+        </section>
+      </main>
+
+      <!-- <main>
+        <section>
+          
+        </section>
+      </main> -->
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="geolocation.css">
+    <script defer src="geolocation.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+    crossorigin=""/>
+     <script defer src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+     crossorigin=""></script>
+    <title>My current location</title>
+</head>
+<body>
+    <div class="navDiv">  
+        <ul>
+            <li><a href="index.html">Projects</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+    <div id="infoDivmy">
+        <h1 id="h1Infomy">My current <br/>loction:</h1>
+  
+        <h2 id="lanLonPMy">
+          latitude: <span id="latMy"></span>° <!-- &deg; --><br />
+          longitude: <span id="lonMy"></span>° <br />
+        </h2>
+        <h1>Time</h1>
+        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+        
+<h1  onload="showTime()"></h1>
+
+    
+      </div>
+  
+      <div class="divBtn">
+        <button class="goToBtn" onclick="project3ImageFunc()">Go to ISS current location</button>
+      </div>
+        <div id="myMap"></div>
+
+        
+</body>
+</html>

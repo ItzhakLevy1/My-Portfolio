@@ -1,0 +1,399 @@
+body {
+  /* background-color:#eee */
+  /* background-color: rgb(0, 0, 0); */
+  display: flex;
+  color: black;
+	background-image: url('./images/testBgDark.jpg');
+	background-size: cover;
+	background-position: center center;
+  /* opacity: 0.1; */
+	height: 100vh;
+	width: 100vw;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.topDiv{
+  position: relative;
+  display: flex;
+  height: 1%;
+  width: 100%;
+  /* margin: auto; */
+  display: flex;
+  /* align-items: center; */
+  align-content: center;
+  margin-left: 42%;
+  background-position: 100%;
+}
+
+/* -----------------------------------------The nav bar section ------------------------------------*/
+
+.navDiv {
+  position: sticky;
+  top: 3rem;
+  z-index: 99;
+  /* color: white; */
+  /* position: absolute; */
+}
+.navDiv::after {
+  position: sticky;
+  top: 3rem;
+  z-index: 99;
+}
+
+ul li {
+  list-style: none;
+  font-size: 1.6em;
+  height: 50px;
+  font-family: "oswald", sans-serif;
+  border-bottom: 1px solid hsl(0, 0%, 100%);
+  line-height: 50px;
+  transition-duration: 0.5s;
+  display:inline-block;
+
+}
+
+ul {
+  background-color: rgba(68, 68, 68, 0);
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+ul a {
+  display: block;
+   text-decoration: none;
+  /* color: white;  */
+  -webkit-text-stroke: 1px white; /* width and color */
+  color: black;
+}
+
+ul li a {
+  border-bottom: 1.5px solid transparent;
+  transition: 1s;
+}
+
+ul li a:hover {
+  border-bottom: 1.5px solid  rgb(255, 0, 200);
+  -webkit-text-stroke: 1.5px rgb(255, 0, 200); /* width and color */
+  color: black;
+  /* font-size: 1.6rem; */
+  /* text-shadow: 1px 1px 1px white; */
+}
+
+
+.videoDiv {
+  display: block;
+  position: absolute;
+  /* top: 0; */
+  left: 5rem;
+  z-index: -1;
+  width: 50vw;
+  height: 50vh;
+}
+
+/*----------------------------------------- Project2-------------------------------  */
+.grid {
+  width: 94.5rem;
+  height: 100vh;
+  /* background-image: url('wallhaven-0q5e3q_1600x900.png'); */
+  /* background-image: url('https://subtlepatterns.com/patterns/dark_wall.png'); */
+
+  position: relative;
+  font-size: 6rem;
+  text-align: center;
+  /* color: rgb(21, 255, 0); */
+  /* color: rgb(255, 251, 0); */
+  /* color: rgb(255, 166, 0); */
+  color: black;
+  margin-top: 9rem;
+  margin-left: -141%;
+  /* margin-bottom: 50%; */
+  font-weight: bolder;
+  -webkit-text-stroke: 1px white; /* width and color */
+  -webkit-animation: fadein 3s;
+  /* font-family: cursive, Verdana, Geneva, Tahoma, sans-serif; */
+
+  /* ---------------------------Make text disapear----------------- */
+  /* visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear; */
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+      opacity:0;
+  }
+  to {
+      opacity:1;
+  }
+}
+
+
+.doodler {
+  width: 87px;
+  height: 85px;
+  background-image: url("./images/u1.png");
+  position: absolute;
+  /* margin-bottom: 1%; */
+  
+}
+
+.platform {
+  width: 120px;
+  height: 15px;
+  
+  /* background-image: url("Webp.net-resizeimage.png"); */
+  /* background:rgb(247, 99, 0);  */
+  border-radius: 1rem;
+  position: absolute;
+  -webkit-border-radius: 50%;
+  /* border-radius: 10%; */
+  border-radius: 0px 0px 200px 200px;
+  /* background: rgb(0, 4, 255); */
+  /* background: rgb(1, 238, 255); */
+  background: rgb(0, 0, 0);
+  
+  -webkit-box-shadow: inset 0 7px 15px rgba(255, 255, 255, 0.5),
+    inset 0 -7px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 7px 15px rgba(255, 255, 255, 0.5),
+    inset 0 -7px 15px rgba(0, 0, 0, 0.5);
+    
+}
+
+/*----------------- Adjust the START button within the sweetalert2 alert-------------------  */
+/* Aligns the button in relaion to the alert title */
+.startBtnDiv {
+  margin-top: 100px;
+  margin-bottom: -100px;
+
+  margin-left: -250px;  /* Aligns the button in relaion to the alert title */
+  /* padding-bottom: 0px; */
+  /* margin: 0rem; */
+  display: block;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: 0rem;
+}
+body {
+  overflow: hidden;
+}
+
+/*----------- Aligns both the alet title and button together in relation to the body ---------*/
+#titleGameOver{
+  margin-left: -165px;
+  margin-bottom: 0px;
+}
+
+/* ----------------------------------START GAME button------------------------ */
+
+a#startBtn {
+  position: absolute;
+  display: block;
+  text-align: center;
+  font: 1em/1em Arial, sans-serif;
+  color: #ffe5e5;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  background: #f00;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin-left: -0rem;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-box-shadow: inset 0 -5px 20px rgba(0, 0, 0, 0.5),
+    inset 0 15px 20px rgba(255, 255, 255, 0.5), 0 5px 10px rgba(0, 0, 0, 0.75),
+    0 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 -5px 20px rgba(0, 0, 0, 0.5),
+    inset 0 15px 20px rgba(255, 255, 255, 0.5), 0 5px 10px rgba(0, 0, 0, 0.75),
+    0 10px 10px rgba(0, 0, 0, 0.5);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 78px 9px 0 0;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease;
+  -moz-transition: all 0.1s ease;
+  -o-transition: all 0.1s ease;
+  -ms-transition: all 0.1s ease;
+  /* transition: all 0.9s ease; */
+}
+
+/* -------------------------The outer circle around the inner circle START GAME button---------------- */
+a#startBtn:before {
+  content: " ";
+  display: block;
+  position: absolute;
+  z-index: -5;
+  width: 240px;
+  height: 240px;
+  top: 50%;
+  left: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #f00;
+  top: -20px;
+  left: -20px;
+  -webkit-box-shadow: inset 0 7px 15px rgba(255, 255, 255, 0.5),
+    inset 0 -7px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 7px 15px rgba(255, 255, 255, 0.5),
+    inset 0 -7px 15px rgba(0, 0, 0, 0.5);
+}
+
+a#startBtn:active {
+  -webkit-box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+  color: #ffeded;
+}
+
+/*---------------------------- Adding a new class when the game is over in order of hidding the START GAME button --------------------------------*/
+
+
+/* -------------------------------The sound panel --------------------------*/
+/* 
+  * {
+    border: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  } */
+  /* :root {
+    --bg: #000;
+    --fg: #17181c;
+    --bs1: #ffffff;
+    --bs2: #f3f4f8;
+    --bs3: #cccdd1;
+    --bs4: #c1c2c5;
+    --transDur: 0.1s;
+
+  } */
+  body, form {
+    display: flex;
+  }
+  body, .soundInput {
+    color: var(--fg);
+    font: 1em/1.5 Muli, sans-serif;
+  }
+  body {
+    background-color: var(--bg);
+    height: 100vh;
+  }
+  /* form, .soundLabel {
+    width: 100%;
+  }
+  form {
+    margin: auto;
+    max-width: 24em;
+    padding: 0 1.5em;
+  }
+  .soundLabel {
+    display: block;
+    margin: 0 0.2em;
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .soundLabel:first-child .soundInput {
+    border-radius: 0.5rem 0.5em 0.5em 0.5rem;
+  }
+  .soundLabel:last-child .soundInput {
+    border-radius: 0.5rem 0.5em 0.5em 0.5rem;
+  }
+  .soundInput {
+    border-radius: 0;
+    box-shadow:
+  
+    
+      -0.15em -0.15em 0.95em ;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 0.5em;
+    width: 100%;
+    height: 1em;
+    transition: all var(--transDur) ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+  }
+  .soundInput:checked {
+    box-shadow:
+      -0.15em -0.15em 0.45em var(--bs2) inset,
+      0.15em 0.15em 0.45em var(--bs4) inset,
+      0 0 0 var(--bs4), 
+      0 0 0 var(--bs1);
+  }
+  .soundInput:checked + span {
+    opacity: 1;
+  }
+  .soundInput:focus {
+    outline: transparent;
+  }
+  .soundInput + span {
+    opacity: 0.1;
+    transition: opacity ease-in-out;
+  }
+  
+  .soundDiv{
+    margin-left: 20%;
+    margin-top: 1%;
+  }
+
+  .custom-input-class::-webkit-input-placeholder {
+    color: #f00 !important;
+    opacity: 1 !important;
+  } */
+
+  .soundDiv{
+    /* margin-left: 20%;
+    margin-top: 1%;
+    margin-bottom: 0%;
+    padding-bottom: 0%; */
+    position: absolute;
+  }
+
+  .soundBtn{
+    color: white;
+    background-color: black;
+    border-radius: 10%;
+    border-color: white;
+    cursor: pointer;
+  }
+
+  .moveIconsDiv{
+    background-color: black;
+    border-radius: 5px;
+    border: 1px ;
+    position: fixed;
+    margin-top: -40px;
+    right: 0%;
+    margin-right: 1%;
+    padding-left: 6px;
+    padding-right:6px;
+    height: 60px;
+    border-color: white;
+
+  }
+
+ /* ionicons icon  */
+  /* ion-icon {
+    font-size: 64px;
+    color: blue;
+    } */
+.iconP{
+  font-size: 1rem;
+  margin-bottom: -30px;
+  margin-top: 5px;
+  border-color: white;
+
+}
+/* .arrowIcons{
+  margin-top: -10px;
+} */
+.arrowIcons{
+  padding-left: -1111px;
+}

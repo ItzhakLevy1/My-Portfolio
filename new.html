@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script  defer src="https://smtpjs.com/v3/smtp.js"></script>
+    <script defer type="text/javascript">
+
+        function sendEmail() {
+            //var userValue = document.getElementById("mailSubject").value
+            //var passValue = document.getElementById('mailBody').value
+
+
+            Email.send({
+                Host : "smtp.gmail.com",
+                Username : "atzikl7933@gamil.com",
+                Password : "goingbig123",
+                From : "atzikl7933@gamil.com",
+                To : 'atzikl7933@gamil.com',
+                Subject : "Test mail subject",
+                Body : "Test mail body"
+             })
+                 .then(function (message) {
+                     alert("mail sent successfully")
+                 });
+        }
+    </script>
+</head>
+<body>
+   <table>
+       <tr>
+           <td>
+               Subject:
+           </td>
+           <td>
+            <input type="text" id="mailSubject" />
+           </td>
+       </tr>
+       <tr>
+           <td>
+               Body:
+           </td>
+           <td>
+               <input type="text" id="mailBody" />
+           </td>
+       </tr>
+       <tr>
+           <td></td>
+           <td>
+               <input type="button" onclick="sendEmail();" value="send the email" />
+           </td>
+       </tr>
+   </table>
+    
+</body>
+</html>
